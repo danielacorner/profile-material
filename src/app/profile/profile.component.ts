@@ -21,7 +21,7 @@ import { Component, OnInit } from '@angular/core';
         </ul>
       </div>
       <div class="img-container col s4 m5 offset-m1"><img class="responsive-img right circle z-depth-3" 
-      src="../../assets/headshot.jpg" alt="headshot"></div>
+      src="./assets/headshot.jpg" alt="headshot"></div>
     </div>
   </div>
   </div>
