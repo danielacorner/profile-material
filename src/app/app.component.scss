@@ -1,0 +1,29 @@
+.menu-icon {
+  padding: 0 24px;
+  cursor: pointer;
+}
+.white-text{
+  color: white;
+  fill: white;
+}
+.menu-spacer {
+  flex: 1 1 auto;
+}
+
+.mat-tab-label-content {
+  margin: 10%;
+  color: white;
+  top: 22.9px;
+
+}
+
+/* Rules for sizing the icon. */
+
+.menu-item-icon {
+  transform: scale(1);
+  margin: auto;
+}
+
+.material-icons.md-light {
+  color: rgba(255, 255, 255, 1);
+}
