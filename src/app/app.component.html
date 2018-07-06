@@ -1,38 +1,48 @@
+<div class="navbar-fixed">
+  <nav mat-tab-nav-bar [backgroundColor]="'primary'">
+    <!-- <mat-toolbar-row> -->
 
-<mat-toolbar color="primary">
-  <mat-toolbar-row>
-    
-    <span>Daniel Corner</span>
-    <span class="menu-spacer"></span>
-    
-    <!-- menu tabs -->
-      <mat-tab-group [color]="'accent'" [backgroundColor]="'primary'" class="menu-tabs hide-on-small-only">
-        <mat-tab label="Profile"></mat-tab>
+      <span class="menu-name">Daniel Corner</span>
+      <span class="menu-spacer"></span>
+
+      <!-- menu tabs -->
+        <a mat-tab-link class="hide-on-small-only"
+          *ngFor="let link of navLinks"
+          [active]="rla.isActive"
+          routerLink="{{link|lowercase}}"
+          routerLinkActive
+          #rla="routerLinkActive"
+          >
+          {{link}}
+        </a>
+      <!-- <mat-tab-group [color]="'accent'" [backgroundColor]="'primary'" class="menu-tabs hide-on-small-only">
+        <a mat-tab-link label="Profile"></mat-tab>
         <mat-tab label="Projects" routerLink="/projects"></mat-tab>
-      </mat-tab-group>
-    
-    <!-- menu button -->
-    <mat-icon class="hide-on-med-and-up menu-icon" [matMenuTriggerFor]="menu">menu</mat-icon>
-      <!-- menu -->
-      <mat-menu #menu="matMenu">
-        <button mat-menu-item routerLink="/profile">
-          <span class="tab-text">Profile</span>
-          <!-- <i class="material-icons menu-item-icon">person</i> -->
-        </button>
-        <button mat-menu-item routerLink="/projects" [matMenuTriggerFor]="projects">
-          <span class="tab-text">Projects</span>
-          <!-- <i class="material-icons menu-item-icon">work</i> -->
-        </button>
-        </mat-menu>
-        <!-- projects submenu -->
-        
-        <mat-menu #projects="matMenu">
-          <button mat-menu-item routerLink="/projects/1">Pave (D3.js)</button>
-          <button mat-menu-item routerLink="/projects/2">a-h-l.net</button>
-          <button mat-menu-item routerLink="/projects/3">Pave (Tableau)</button>
-        </mat-menu>
+      </mat-tab-group> -->
 
-  </mat-toolbar-row>
-</mat-toolbar>
+      <!-- menu button -->
+      <mat-icon class="hide-on-med-and-up menu-icon" [matMenuTriggerFor]="menu">menu</mat-icon>
+        <!-- menu -->
+        <mat-menu #menu="matMenu">
+          <button class="hide-on-med-and-up" mat-menu-item routerLink="/profile">
+            <span class="tab-text">Profile</span>
+            <!-- <i class="material-icons menu-item-icon">person</i> -->
+          </button>
+          <button class="hide-on-med-and-up" mat-menu-item routerLink="/projects" [matMenuTriggerFor]="projects">
+            <span class="tab-text">Projects</span>
+            <!-- <i class="material-icons menu-item-icon">work</i> -->
+          </button>
+          </mat-menu>
+          <!-- projects submenu -->
+
+          <mat-menu #projects="matMenu">
+            <button class="hide-on-med-and-up" mat-menu-item routerLink="/projects/1">Pave (D3.js)</button>
+            <button class="hide-on-med-and-up" mat-menu-item routerLink="/projects/2">a-h-l.net</button>
+            <button class="hide-on-med-and-up" mat-menu-item routerLink="/projects/3">Pave (Tableau)</button>
+          </mat-menu>
+
+    <!-- </mat-toolbar-row> -->
+  </nav>
+</div>
 
 <router-outlet></router-outlet>
