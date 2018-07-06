@@ -24,9 +24,11 @@
     "@angular/router": "^6.0.3",
     "angular-media-queries": "^0.6.1",
     "angular2-materialize": "^15.1.10",
+    "body-scroll-lock": "^2.4.6",
     "core-js": "^2.5.4",
     "hammerjs": "^2.0.8",
     "materialize-css": "^1.0.0-rc.2",
+    "ng-disable-scroll": "^0.1.1",
     "rxjs": "^6.0.0",
     "zone.js": "^0.8.26"
   },

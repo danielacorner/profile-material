@@ -46,17 +46,17 @@ import { Component, OnInit } from '@angular/core';
 `]
 })
 export class ProjectsComponent implements OnInit {
-
+  public site = { url: "https://dcorn068.github.io/profile-material/"}
   public modalOn = false;
   public projects = [
     {
       id: "1", 
       title: "Pave: The Canadian Job Explorer (D3.js)",
       subtitle: "interactive data visualization",
-      cardLogoUrl: "../../assets/pave_d3.bmp",
+      cardLogoUrl: "{{site.url}}/assets/pave_d3.bmp",
       trustedUrl: null,
       cardLogoAltText: "Logo for Pave (D3.js)",
-      cardImageUrl: "../../assets/pave_d3_logo.png",
+      cardImageUrl: "{{site.url}}/assets/pave_d3_logo.png",
       description: "Pave is an interactive data visualization... ",
       siteLink: "dcorn068.github.io/Pave-D3/",
     },
@@ -64,10 +64,10 @@ export class ProjectsComponent implements OnInit {
       id: "2", 
       title: "a-h-l.net",
       subtitle: "responsive portfolio site",
-      cardLogoUrl: "../../assets/ahl.bmp",
+      cardLogoUrl: "{{site.url}}/assets/ahl.bmp",
       trustedUrl: null,
       cardLogoAltText: "Logo for a-h-l.net",
-      cardImageUrl: "../../assets/ahl.bmp",
+      cardImageUrl: "{{site.url}}/assets/ahl.bmp",
       description: "A basic portfolio website... ",
       siteLink: "dcorn068.github.io/a-h-l/index.html",
     },
@@ -75,10 +75,10 @@ export class ProjectsComponent implements OnInit {
       id: "3", 
       title: "Pave: The Canadian Job Explorer (Tableau)",
       subtitle: "interactive data visualization",
-      cardLogoUrl: "../../assets/pave_tableau.bmp",
+      cardLogoUrl: "{{site.url}}/assets/pave_tableau.bmp",
       trustedUrl: null,
       cardLogoAltText: "Logo for Pave (Tableau)",
-      cardImageUrl: "../../assets/pave_tableau_logo.bmp",
+      cardImageUrl: "{{site.url}}/assets/pave_tableau_logo.bmp",
       description: "Pave is an interactive data visualization... ",
       siteLink: "public.tableau.com/profile/daniel.corner#!/vizhome/PavePrototype4_1/Welcome",
     },
