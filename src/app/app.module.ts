@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule, routingComponents } from './app-routing.module';
-import { DetailsComponent } from './details/details.component';
 import { ModalComponent } from './modal/modal.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
@@ -14,7 +13,6 @@ import { MaterialModule } from './material';
   declarations: [
     AppComponent,
     routingComponents,
-    DetailsComponent,
     PageNotFoundComponent,
     ModalComponent,
   ],
