@@ -1,15 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-details',
   template: `
     <p>
-      details works!
+      {{childProjects.title}}
+      {{childProjects.subtitle}}
+      {{childProjects.description}}
     </p>
   `,
   styles: []
 })
 export class DetailsComponent implements OnInit {
+
+  @Input() childProjects: array;
 
   constructor() { }
 

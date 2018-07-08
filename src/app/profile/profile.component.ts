@@ -9,14 +9,11 @@ import { Component, OnInit } from '@angular/core';
       <div class="row fadeUp">
         <div class="col s8 m6">
           <h3 class="profile-title center">Hello world!</h3>
-          <p>
-            I'm a Junior Web Developer looking to get started in the industry. I come from a background in Engineering and Biotechnology.
-          </p>
-          <p>
-          </p>
+          <p>I'm a Junior Web Developer looking to get started in the industry.</p>
+          <p>I have a background in engineering and biotechnology, and I love the power and precision of programming.</p>
           <ul>
-            <li>I came to the web to <a href>play</a> with <a href>data</a></li>
-            <li>Some of my best friends are <a href>spreadsheets</a></li>
+            <li>I like to <a href>play</a> with <a href>data</a></li>
+            <li>Some of my <a href>best</a> <a href>friends</a> are <a href>spreadsheets</a></li>
             <li><a href>link3</a></li>
           </ul>
         </div>
