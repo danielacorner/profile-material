@@ -16,7 +16,7 @@ import * as M from 'materialize-css';
           <img class="card-image activator" src="{{project.cardImageUrl}}" alt="{{project.cardImageAltText}}">
         </div>
 
-        <div style="width: 50%">
+        <div style="width: 60%">
             <div class="card-content">
               <span class="card-title activator grey-text text-darken-4">
               {{project.title}}<i class="material-icons right">more_vert</i></span>
@@ -137,7 +137,7 @@ export class ProjectsComponent implements OnInit {
       siteLink: "dcorn068.github.io/Pave-D3/",
       description: `
         Pave is an interactive data visualization to help high school students develop a mental model of the current career landscape.
-        This is a second iteration using SVG data-binding and force simulation from the D3.js library. 
+        This is a second iteration using SVG data-binding and force simulation from the D3.js library.
         Data was wrangled and cleaned in Microsoft Excel.
         Pave is currently undergoing user testing with high school students.
       `,
@@ -153,7 +153,7 @@ export class ProjectsComponent implements OnInit {
         <li><a target="_blank" href="http://brookfieldinstitute.ca/research-analysis/automation/">Automation risk predictions from the Brookfield Institute</a></li>
         <li>Microsoft Excel</li>
         </ul>
-      `,
+      `
     },
     {
       id: "2",
@@ -177,7 +177,7 @@ export class ProjectsComponent implements OnInit {
         <li><a href="https://materializecss.com/" target="_blank">Materialize CSS</a></li>
         <li><a href="https://scrollrevealjs.org/" target="_blank">ScrollReveal</a></li>
         </ul>
-      `,
+      `
     },
     {
       id: "3",
@@ -205,7 +205,7 @@ export class ProjectsComponent implements OnInit {
         <li><a target="_blank" href="http://brookfieldinstitute.ca/research-analysis/automation/">Automation risk predictions from the Brookfield Institute</a></li>
         <li>Microsoft Excel</li>
         </ul>
-      `,
+      `
     }
   ];
 
@@ -213,10 +213,10 @@ export class ProjectsComponent implements OnInit {
 
   ngOnInit() {
     // modal initialization
-  document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.modal');
-    var instances = M.Modal.init(elems, options);
-    var options = {};
-  });
+    document.addEventListener("DOMContentLoaded", function() {
+      var elems = document.querySelectorAll(".modal");
+      var instances = M.Modal.init(elems, options);
+      var options = {};
+    });
   }
 }
