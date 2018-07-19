@@ -7,12 +7,14 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material';
+import { DetailsComponent } from './details/details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     routingComponents,
     PageNotFoundComponent,
+    DetailsComponent,
   ],
   imports: [
     BrowserModule,
