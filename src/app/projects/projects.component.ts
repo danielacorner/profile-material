@@ -142,22 +142,26 @@ export class ProjectsComponent implements OnInit {
         Data was wrangled and cleaned in Microsoft Excel.
         Pave is currently undergoing user testing with high school students.
       `,
-      details: `
-        <p>Pave is an interactive data visualization to help high school students develop
-        a mental model of the current career landscape.</p>
-        <p>This is a second iteration using SVG data-binding and force simulation from the
-        <a target="_blank" href="https://d3js.org/">D3.js</a> library.</p>
-        <p>Data was wrangled and cleaned in Microsoft Excel.</p>
-        <p>Pave is currently undergoing user testing with high school students.</p>
-        <ul>
-        <li><strong>Sources:</strong></li>
-        <li><a target="_blank" href="https://d3js.org/">D3.js</a></li>
-        <li><a target="_blank" href="http://noc.esdc.gc.ca/English/home.aspx">National Occupation Code classification system</a></li>
-        <li><a target="_blank" href="http://brookfieldinstitute.ca/research-analysis/automation/">
-        Automation risk predictions from the Brookfield Institute</a></li>
-        <li>Microsoft Excel</li>
-        </ul>
-      `
+      details: [
+        `Pave is an interactive data visualization designed to help high school students develop a mental model of the current career landscape.
+        This version is a second iteration using SVG data-binding and force simulation from the D3.js library.
+        The initial prototype was inspired by and placed third in the Student Pathways Challenge.`,
+        `Following initial research and competitor analysis, we determined that there was an unmet need for a way to
+        quickly explore many potential career pathways at once, to help students get a handle on that age-old question, "what do you want to do?".`,
+        `Using the highly interactive D3.js library to provide an engaging data visualization, this app allows fast, multi-dimensional exploration of Canadian jobs,
+        filterable by 4 major and 15 minor job skill categories as classified by the Government of Canada's National Occupation Code system.`,
+        `This version of Pave served as my introduction to web development, so the code is inflexible and redundant. 
+        Pave is currently being ported to a modular architecture using the Angular framework.
+      `],
+      tools: [
+        {description: "D3.js", link: "https://d3js.org/"},
+        {description: "Microsoft Excel", link: "https://www.youtube.com/watch?v=miUTG38k2mA&list=PLrRPvpgDmw0lcTfXZV1AYEkeslJJcWNKw"},
+      ],
+      sources: [
+        {description: "National Occupation Code classification system", link: "http://noc.esdc.gc.ca/English/home.aspx"},
+        {description: "Automation risk predictions from the Brookfield Institute", link: "http://brookfieldinstitute.ca/research-analysis/automation/"},
+        {description: "Student Pathways Challenge", link: "https://studentpathwayschallenge.ca/"},
+      ],
     },
     {
       id: '2',
@@ -170,18 +174,19 @@ export class ProjectsComponent implements OnInit {
       siteLink: 'dcorn068.github.io/a-h-l/index.html',
       description: `
         A basic portfolio website with responsive design.
-        It uses CSS Grid Layout, media queries, Materialize CSS, and ScrollReveal.
+        It uses CSS Grid Layout, Materialize CSS, ScrollReveal, and media queries.
       `,
-      details: `
-        <p>A basic portfolio website with responsive design.</p>
-        <ul>
-        <li><strong>Sources:</strong></li>
-        <li><a target="_blank" href="https://www.w3schools.com/css/css_grid.asp">CSS Grid Layout</a></li>
-        <li><a target="_blank" href="https://www.w3schools.com/css/css_rwd_mediaqueries.asp">Media queries</a></li>
-        <li><a href="https://materializecss.com/" target="_blank">Materialize CSS</a></li>
-        <li><a href="https://scrollrevealjs.org/" target="_blank">ScrollReveal</a></li>
-        </ul>
-      `
+      details: [
+        `A responsive portfolio website developed for my partner Adrianne.`,
+        `As a learning experience I manually reproduced the design from a Wordpress template.`,
+        `Animations were implemented with basic CSS/JS and the ScrollReveal library; the responsiveness comes from CSS Grid Layout, Materialize CSS, and media queries.`,
+        `This project is currently being ported to Angular, a modular architecture for improved manageability.
+      `],
+      tools: [
+        {description: "ScrollReveal", link: "https://scrollrevealjs.org/"},
+        {description: "CSS Grid", link: "https://www.w3schools.com/css/css_grid.asp"},
+        {description: "Materialize CSS", link: "https://materializecss.com/"},
+      ],
     },
     {
       id: '3',
@@ -198,21 +203,26 @@ export class ProjectsComponent implements OnInit {
         This is a first iteration using Tableau.
         It placed third in the Student Pathways Challenge design competition.
         `,
-      details: `
-        <p>Pave is an interactive data visualization to help high school students develop
-        a mental model of the current career landscape.</p>
-        <p>This is a first iteration using <a href="https://www.tableau.com/">Tableau</a>
-        for visualization and Microsoft Excel for data wrangling and cleaning.</p>
-        <p>It placed third in the <a href="https://studentpathwayschallenge.ca/">Student Pathways Challenge</a> design competition.</p>
-        <ul>
-        <li><strong>Sources:</strong></li>
-        <li><a href="https://www.tableau.com/">Tableau</a></li>
-        <li><a target="_blank" href="http://noc.esdc.gc.ca/English/home.aspx">National Occupation Code classification system</a></li>
-        <li><a target="_blank" href="http://brookfieldinstitute.ca/research-analysis/automation/">
-        Automation risk predictions from the Brookfield Institute</a></li>
-        <li>Microsoft Excel</li>
-        </ul>
-      `
+      details: [
+        `Pave is an interactive data visualization designed to help high school students develop a mental model of the current career landscape.
+        Inspired by the Student Pathways Challenge, our team submitted this prototype at the pitch competition and came in third.`,
+        `Following initial research and competitor analysis, we determined that there was an unmet need for a way to
+        quickly explore many potential career pathways at once, to help students get a handle on that age-old question, "what do you want to do?".`,
+        `Using Tableau for visualization and Microsoft Excel for data wrangling and cleaning, we developed a data visualization of Canadian jobs filterable by
+        4 major and 15 minor job skill categories, as classified by the Government of Canada's National Occupation Code system. The resulting prototype
+        allows users to quickly filter the jobs dataset to suit their skill preferences or ambitions.`,
+        `Pave is currently undergoing iteration user testing with high school students.
+
+      `],
+      tools: [
+        {description: "Tableau", link: "https://www.tableau.com/"},
+        {description: "Microsoft Excel", link: "https://www.youtube.com/watch?v=miUTG38k2mA&list=PLrRPvpgDmw0lcTfXZV1AYEkeslJJcWNKw"},
+      ],
+      sources: [
+        {description: "National Occupation Code classification system", link: "http://noc.esdc.gc.ca/English/home.aspx"},
+        {description: "Automation risk predictions from the Brookfield Institute", link: "http://brookfieldinstitute.ca/research-analysis/automation/"},
+        {description: "Student Pathways Challenge", link: "https://studentpathwayschallenge.ca/"},
+      ],
     }
   ];
 
@@ -223,26 +233,40 @@ export class ProjectsComponent implements OnInit {
   openDialog(project): void {
     const dialogRef = this.dialog.open(ModalDialogComponent, {
       height: '90%',
-      width: '90%',
-      data: project,
+      width: 'auto',
+      data: project
     });
   }
 }
 
-  @Component({
-    selector: 'app-modal-dialog',
-    template: `
-      <p>dialog for project {{data.id}}</p>
+  @Component({ selector: 'app-modal-dialog', template: `
+    <div class="faded faded-bottom" style="height: 50vh; overflow: hidden;">
+      <img src="{{data.cardImageUrl}}" style="object-fit: cover">
+    </div>
+    <div>
+      <p *ngFor="let d of data.details">{{d}}</p>
+    </div>
+    <ul>
+      <li *ngIf="data.tools"><strong>Tools:</strong></li>
+      <li *ngFor="let t of data.tools">
+        <a target="_blank" href="{{t.link}}">{{t.description}}</a>
+      </li>
+      <li *ngIf="data.sources"><strong>Sources:</strong></li>
+      <li *ngFor="let s of data.sources">
+        <a target="_blank" href="{{s.link}}">{{s.description}}</a>
+      </li>
+    </ul>
+        
+    <a target="_blank" href="{{data.siteLink}}" mat-button style="float: right;">
+      OPEN <mat-icon class="menu-icon">open_in_new</mat-icon></a>
+
     `,
-  })
+    styleUrls: ['./modal.component.scss']
+})
   export class ModalDialogComponent {
+    constructor(public dialogRef: MatDialogRef<ModalDialogComponent>, @Inject(MAT_DIALOG_DATA) public data) {}
 
-  constructor(
-    public dialogRef: MatDialogRef<ModalDialogComponent>,
-    @Inject(MAT_DIALOG_DATA) public data) { }
-
-  onNoClick(): void {
-    this.dialogRef.close();
+    onNoClick(): void {
+      this.dialogRef.close();
+    }
   }
-
-}
