@@ -241,7 +241,7 @@ export class ProjectsComponent implements OnInit {
 
   @Component({ selector: 'app-modal-dialog', template: `
     <div class="faded faded-bottom" style="height: 50vh; overflow: hidden;">
-      <img src="{{data.cardImageUrl}}" style="object-fit: cover; margin: auto;">
+      <img src="{{data.cardImageUrl}}" style="object-fit: cover">
     </div>
     <div>
       <p *ngFor="let d of data.details">{{d}}</p>
