@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ProfileComponent } from './profile/profile.component';
-import { ProjectsComponent } from './projects/projects.component';
+import { ProjectsComponent, ModalDialogComponent } from './projects/projects.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const routes: Routes = [
@@ -20,4 +20,5 @@ export const routingComponents = [
   ProfileComponent,
   ProjectsComponent,
   PageNotFoundComponent,
-]
+  ModalDialogComponent,
+];

@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import * as $ from 'jquery';
 import * as M from 'materialize-css';
 
 @Component({
-  selector: "app-projects",
+  selector: 'app-projects',
   template: `
   <!-- HORIZONTAL CARDS (mobile & tablet) -->
 
@@ -26,7 +27,7 @@ import * as M from 'materialize-css';
             </div>
 
             <div class="card-action" style="position: absolute; bottom: 0;">
-              <a href="#modal{{project.id}}" class="modal-trigger" mat-button>
+              <a (click)="openDialog(project)" mat-button>
                 DETAILS</a>
               <a target="_blank" href="{{project.siteLink}}" mat-button style="margin-right: 0">
                 OPEN <mat-icon class="menu-icon">open_in_new</mat-icon></a>
@@ -63,7 +64,7 @@ import * as M from 'materialize-css';
           </div>
 
           <div class="card-action">
-            <a href="#modal{{project.id}}" class="modal-trigger" mat-button>
+            <a (click)="openDialog(project)" mat-button>
               DETAILS</a>
             <a href="{{project.siteLink}}" target="_blank" mat-button style="margin-right: 0">
               OPEN <mat-icon class="menu-icon">open_in_new</mat-icon></a>
@@ -124,17 +125,17 @@ import * as M from 'materialize-css';
   ]
 })
 export class ProjectsComponent implements OnInit {
-  public site = { url: "https://dcorn068.github.io/profile-material/" };
+  public site = { url: 'https://dcorn068.github.io/profile-material/' };
   public projects = [
     {
-      id: "1",
-      title: "Pave (D3.js)",
-      subtitle: "interactive data visualization",
+      id: '1',
+      title: 'Pave (D3.js)',
+      subtitle: 'interactive data visualization',
       trustedUrl: null,
-      cardImageUrl: "./assets/pave_d3.bmp",
-      cardImageAltText: "Logo for Pave (D3.js)",
-      cardLogoUrl: "./assets/pave_d3_logo.png",
-      siteLink: "dcorn068.github.io/Pave-D3/",
+      cardImageUrl: './assets/pave_d3.bmp',
+      cardImageAltText: 'Logo for Pave (D3.js)',
+      cardLogoUrl: './assets/pave_d3_logo.png',
+      siteLink: 'dcorn068.github.io/Pave-D3/',
       description: `
         Pave is an interactive data visualization to help high school students develop a mental model of the current career landscape.
         This is a second iteration using SVG data-binding and force simulation from the D3.js library.
@@ -142,28 +143,31 @@ export class ProjectsComponent implements OnInit {
         Pave is currently undergoing user testing with high school students.
       `,
       details: `
-        <p>Pave is an interactive data visualization to help high school students develop a mental model of the current career landscape.</p>
-        <p>This is a second iteration using SVG data-binding and force simulation from the <a target="_blank" href="https://d3js.org/">D3.js</a> library.</p>
+        <p>Pave is an interactive data visualization to help high school students develop
+        a mental model of the current career landscape.</p>
+        <p>This is a second iteration using SVG data-binding and force simulation from the
+        <a target="_blank" href="https://d3js.org/">D3.js</a> library.</p>
         <p>Data was wrangled and cleaned in Microsoft Excel.</p>
         <p>Pave is currently undergoing user testing with high school students.</p>
         <ul>
         <li><strong>Sources:</strong></li>
         <li><a target="_blank" href="https://d3js.org/">D3.js</a></li>
         <li><a target="_blank" href="http://noc.esdc.gc.ca/English/home.aspx">National Occupation Code classification system</a></li>
-        <li><a target="_blank" href="http://brookfieldinstitute.ca/research-analysis/automation/">Automation risk predictions from the Brookfield Institute</a></li>
+        <li><a target="_blank" href="http://brookfieldinstitute.ca/research-analysis/automation/">
+        Automation risk predictions from the Brookfield Institute</a></li>
         <li>Microsoft Excel</li>
         </ul>
       `
     },
     {
-      id: "2",
-      title: "a-h-l.net",
-      subtitle: "responsive portfolio site",
+      id: '2',
+      title: 'a-h-l.net',
+      subtitle: 'responsive portfolio site',
       trustedUrl: null,
-      cardImageUrl: "./assets/ahl.bmp",
-      cardImageAltText: "Logo for a-h-l.net",
-      cardLogoUrl: "./assets/ahl.bmp",
-      siteLink: "dcorn068.github.io/a-h-l/index.html",
+      cardImageUrl: './assets/ahl.bmp',
+      cardImageAltText: 'Logo for a-h-l.net',
+      cardLogoUrl: './assets/ahl.bmp',
+      siteLink: 'dcorn068.github.io/a-h-l/index.html',
       description: `
         A basic portfolio website with responsive design.
         It uses CSS Grid Layout, media queries, Materialize CSS, and ScrollReveal.
@@ -180,43 +184,65 @@ export class ProjectsComponent implements OnInit {
       `
     },
     {
-      id: "3",
-      title: "Pave (Tableau)",
-      subtitle: "interactive data visualization",
+      id: '3',
+      title: 'Pave (Tableau)',
+      subtitle: 'interactive data visualization',
       trustedUrl: null,
-      cardImageUrl: "./assets/pave_tableau.bmp",
-      cardImageAltText: "Logo for Pave (Tableau)",
-      cardLogoUrl: "./assets/pave_tableau_logo.bmp",
+      cardImageUrl: './assets/pave_tableau.bmp',
+      cardImageAltText: 'Logo for Pave (Tableau)',
+      cardLogoUrl: './assets/pave_tableau_logo.bmp',
       siteLink:
-        "public.tableau.com/profile/daniel.corner#!/vizhome/PavePrototype4_1/Welcome",
+        'public.tableau.com/profile/daniel.corner#!/vizhome/PavePrototype4_1/Welcome',
       description: `
         Pave is an interactive data visualization to help high school students develop a mental model of the current career landscape.
         This is a first iteration using Tableau.
         It placed third in the Student Pathways Challenge design competition.
         `,
       details: `
-        <p>Pave is an interactive data visualization to help high school students develop a mental model of the current career landscape.</p>
-        <p>This is a first iteration using <a href="https://www.tableau.com/">Tableau</a> for visualization and Microsoft Excel for data wrangling and cleaning.</p>
+        <p>Pave is an interactive data visualization to help high school students develop
+        a mental model of the current career landscape.</p>
+        <p>This is a first iteration using <a href="https://www.tableau.com/">Tableau</a>
+        for visualization and Microsoft Excel for data wrangling and cleaning.</p>
         <p>It placed third in the <a href="https://studentpathwayschallenge.ca/">Student Pathways Challenge</a> design competition.</p>
         <ul>
         <li><strong>Sources:</strong></li>
         <li><a href="https://www.tableau.com/">Tableau</a></li>
         <li><a target="_blank" href="http://noc.esdc.gc.ca/English/home.aspx">National Occupation Code classification system</a></li>
-        <li><a target="_blank" href="http://brookfieldinstitute.ca/research-analysis/automation/">Automation risk predictions from the Brookfield Institute</a></li>
+        <li><a target="_blank" href="http://brookfieldinstitute.ca/research-analysis/automation/">
+        Automation risk predictions from the Brookfield Institute</a></li>
         <li>Microsoft Excel</li>
         </ul>
       `
     }
   ];
 
-  constructor() {}
+  constructor(public dialog: MatDialog) {}
 
-  ngOnInit() {
-    // modal initialization
-    document.addEventListener("DOMContentLoaded", function() {
-      var elems = document.querySelectorAll(".modal");
-      var instances = M.Modal.init(elems, options);
-      var options = {};
+  ngOnInit() {}
+
+  openDialog(project): void {
+    const dialogRef = this.dialog.open(ModalDialogComponent, {
+      height: '90%',
+      width: '90%',
+      data: project,
     });
   }
+}
+
+  @Component({
+    selector: 'app-modal-dialog',
+    template: `
+      <p>dialog for project {{data.id}}</p>
+    `,
+  })
+  export class ModalDialogComponent {
+
+  constructor(
+    public dialogRef: MatDialogRef<ModalDialogComponent>,
+    @Inject(MAT_DIALOG_DATA) public data) { }
+
+  onNoClick(): void {
+    this.dialogRef.close();
+  }
+
 }
