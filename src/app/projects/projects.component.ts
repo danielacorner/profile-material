@@ -135,7 +135,7 @@ export class ProjectsComponent implements OnInit {
       cardImageUrl: './assets/pave_d3.bmp',
       cardImageAltText: 'Logo for Pave (D3.js)',
       cardLogoUrl: './assets/pave_d3_logo.png',
-      siteLink: 'dcorn068.github.io/Pave-D3/',
+      siteLink: 'https://dcorn068.github.io/Pave-D3/',
       description: `
         Pave is an interactive data visualization to help high school students develop a mental model of the current career landscape.
         This is a second iteration using SVG data-binding and force simulation from the D3.js library.
@@ -171,7 +171,7 @@ export class ProjectsComponent implements OnInit {
       cardImageUrl: './assets/ahl.bmp',
       cardImageAltText: 'Logo for a-h-l.net',
       cardLogoUrl: './assets/ahl.bmp',
-      siteLink: 'dcorn068.github.io/a-h-l/index.html',
+      siteLink: 'https://dcorn068.github.io/a-h-l/index.html',
       description: `
         A basic portfolio website with responsive design.
         It uses CSS Grid Layout, Materialize CSS, ScrollReveal, and media queries.
@@ -197,7 +197,7 @@ export class ProjectsComponent implements OnInit {
       cardImageAltText: 'Logo for Pave (Tableau)',
       cardLogoUrl: './assets/pave_tableau_logo.bmp',
       siteLink:
-        'public.tableau.com/profile/daniel.corner#!/vizhome/PavePrototype4_1/Welcome',
+        'https://public.tableau.com/profile/daniel.corner#!/vizhome/PavePrototype4_1/Welcome',
       description: `
         Pave is an interactive data visualization to help high school students develop a mental model of the current career landscape.
         This is a first iteration using Tableau.
@@ -241,7 +241,7 @@ export class ProjectsComponent implements OnInit {
 
   @Component({ selector: 'app-modal-dialog', template: `
     <div class="faded faded-bottom" style="height: 50vh; overflow: hidden;">
-      <img src="{{data.cardImageUrl}}" style="object-fit: cover">
+      <img src="{{data.cardImageUrl}}" style="object-fit: cover; margin: auto;">
     </div>
     <div>
       <p *ngFor="let d of data.details">{{d}}</p>
